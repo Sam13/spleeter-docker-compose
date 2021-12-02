@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  spleeter-separate:
+    image: deezer/spleeter:3.8
+    volumes:
+      - ./:/work      
+    command: [separate, -p, spleeter:4stems, -o, /work/output/, /work/input/test.mp3]
